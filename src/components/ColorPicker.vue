@@ -1,18 +1,22 @@
 <template>
   <div>
     <Pixel
-      interactive
+      isInColorPicker
       color="white"
       :current="color == 'white' ? true : false"
     />
     <Pixel
-      interactive
+      isInColorPicker
       color="lightblue"
       :current="color == 'lightblue' ? true : false"
     />
-    <Pixel interactive color="blue" :current="color == 'blue' ? true : false" />
     <Pixel
-      interactive
+      isInColorPicker
+      color="blue"
+      :current="color == 'blue' ? true : false"
+    />
+    <Pixel
+      isInColorPicker
       color="darkblue"
       :current="color == 'darkblue' ? true : false"
     />
@@ -26,6 +30,11 @@ export default {
   name: 'ColorPicker',
   props: {
     color: String
+  },
+  methods: {
+    changeColor: function(color) {
+      alert(color)
+    }
   },
   components: {
     Pixel
