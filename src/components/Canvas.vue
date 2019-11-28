@@ -1,12 +1,14 @@
 <template>
   <div class="canvas">
-    <Pixel v-for="n in 900" :key="n" color="blue" />
+    <Pixel v-for="n in 900" color="blue" :key="n" />
   </div>
 </template>
+
 <script>
 import Pixel from './Pixel'
+
 export default {
-  name: 'Canvas',
+  name: 'App',
   components: {
     Pixel
   }
